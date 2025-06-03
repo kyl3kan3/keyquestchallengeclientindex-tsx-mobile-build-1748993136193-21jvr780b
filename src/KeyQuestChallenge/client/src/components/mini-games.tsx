@@ -1,3 +1,4 @@
+import React from "react";
 import { useLocation } from "wouter";
 import { Trophy, Star, Gem } from "lucide-react";
 
