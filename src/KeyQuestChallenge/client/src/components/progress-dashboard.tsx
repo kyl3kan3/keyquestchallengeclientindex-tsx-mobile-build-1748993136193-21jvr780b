@@ -1,3 +1,4 @@
+import React from "react";
 import { Medal, Target, Flame, Rocket, Unlock, Crown } from "lucide-react";
 
 interface ProgressDashboardProps {
