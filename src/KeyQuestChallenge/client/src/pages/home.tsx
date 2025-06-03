@@ -1,3 +1,4 @@
+import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import Header from "@/components/header";
 import PlayerProfile from "@/components/player-profile";
