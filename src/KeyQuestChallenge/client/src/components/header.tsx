@@ -1,3 +1,4 @@
+import React from "react";
 import { Keyboard, Coins, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
