@@ -1,3 +1,4 @@
+import React from "react";
 import { Clock, Heart, Pause, SkipForward, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
