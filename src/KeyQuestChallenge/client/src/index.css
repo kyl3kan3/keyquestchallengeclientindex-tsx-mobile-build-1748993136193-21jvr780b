@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  
+  /* Custom KeyQuest colors */
+  --coral: 6 93% 71%;
+  --turquoise: 172 76% 64%;
+  --sky: 199 89% 48%;
+  --mint: 152 68% 70%;
+  --sunny: 45 100% 80%;
+  --lavender: 300 47% 75%;
+  --magic: 252 83% 57%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-sky-400 to-cyan-400 min-h-screen;
+    font-family: 'Nunito', sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-coral {
+    background-color: hsl(var(--coral));
+  }
+  .bg-turquoise {
+    background-color: hsl(var(--turquoise));
+  }
+  .bg-sky {
+    background-color: hsl(var(--sky));
+  }
+  .bg-mint {
+    background-color: hsl(var(--mint));
+  }
+  .bg-sunny {
+    background-color: hsl(var(--sunny));
+  }
+  .bg-lavender {
+    background-color: hsl(var(--lavender));
+  }
+  .bg-magic {
+    background-color: hsl(var(--magic));
+  }
+  
+  .text-coral {
+    color: hsl(var(--coral));
+  }
+  .text-turquoise {
+    color: hsl(var(--turquoise));
+  }
+  .text-sky {
+    color: hsl(var(--sky));
+  }
+  .text-mint {
+    color: hsl(var(--mint));
+  }
+  .text-sunny {
+    color: hsl(var(--sunny));
+  }
+  .text-lavender {
+    color: hsl(var(--lavender));
+  }
+  .text-magic {
+    color: hsl(var(--magic));
+  }
+
+  .border-coral {
+    border-color: hsl(var(--coral));
+  }
+  .border-turquoise {
+    border-color: hsl(var(--turquoise));
+  }
+  .border-sky {
+    border-color: hsl(var(--sky));
+  }
+  .border-mint {
+    border-color: hsl(var(--mint));
+  }
+  .border-sunny {
+    border-color: hsl(var(--sunny));
+  }
+  .border-lavender {
+    border-color: hsl(var(--lavender));
+  }
+  .border-magic {
+    border-color: hsl(var(--magic));
+  }
+
+  .font-fredoka {
+    font-family: 'Fredoka One', cursive;
+  }
+
+  .typing-key {
+    transition: all 0.2s ease;
+  }
+  
+  .typing-key:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .world-card {
+    transition: all 0.3s ease;
+  }
+  
+  .world-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .progress-fill {
+    transition: width 0.8s ease-in-out;
+  }
+
+  @keyframes wiggle {
+    0%, 7% { transform: rotateZ(0); }
+    15% { transform: rotateZ(-15deg); }
+    20% { transform: rotateZ(10deg); }
+    25% { transform: rotateZ(-10deg); }
+    30% { transform: rotateZ(6deg); }
+    35% { transform: rotateZ(-4deg); }
+    40%, 100% { transform: rotateZ(0); }
+  }
+
+  .animate-wiggle {
+    animation: wiggle 1s ease-in-out infinite;
+  }
+
+  .animate-bounce-gentle {
+    animation: bounce 2s infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s infinite;
+  }
+}
